@@ -1,0 +1,91 @@
+{
+  "name": "let-start",
+  "version": "1.0.0",
+  "description": "A flexible web starter kit (yarn, webpack, babel, react, sass, jest, eslint...)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint-script": "eslint --ext .js,.jsx .",
+    "lint-style": "stylelint \"src/*.scss\" \"src/**/*.scss\" \"src/*.css\" \"src/**/*.css\"",
+    "lint": "npm run lint-script && npm run lint-style",
+    "prebuild": "npm run lint && npm test",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [
+    "starter",
+    "kit",
+    "boilerplate",
+    "react",
+    "babel",
+    "webpack",
+    "sass",
+    "eslint",
+    "jest",
+    "yarn"
+  ],
+  "author": "Renaud Tertrais <renaud.tertrais@gmail.com> (https://github.com/renaudtertrais)",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.7.0",
+    "babel-core": "^6.22.1",
+    "babel-jest": "^18.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-react": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.5",
+    "html-webpack-plugin": "^2.26.0",
+    "jest-cli": "^18.1.0",
+    "node-sass": "^4.3.0",
+    "postcss": "^5.2.11",
+    "postcss-loader": "^1.2.2",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "^15.4.2",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "stylelint": "^7.7.1",
+    "webpack": "beta",
+    "webpack-dev-server": "2.2.0",
+    "webpack-merge": "^2.4.0"
+  },
+  "repository": {},
+  "dependencies": {
+    "babel-polyfill": "^6.22.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "IE >= 9"
+  ],
+  "jest": {
+    "verbose": true,
+    "coverageDirectory": "coverage/",
+    "notify": true,
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.s?css$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "src/*.{js,jsx}",
+      "!src/.*",
+      "!src/__test__/*",
+      "!src/**/__test__/*",
+      "!src/**/index.js"
+    ]
+  }
+}
