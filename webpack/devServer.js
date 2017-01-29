@@ -2,8 +2,8 @@
  * dependencies:
  * - webpack-dev-server
  */
-
 import url from 'url';
+import webpack from 'webpack';
 
 const devServer = (serverUrl, other = {}) => {
   const serverUrlWithProtocol = serverUrl.search('//') > -1 ? serverUrl : `http://${serverUrl}`;
@@ -13,12 +13,12 @@ const devServer = (serverUrl, other = {}) => {
     devServer: Object.assign({
       host: hostname,
       port: parseInt(port, 10),
-      //stats: { colors: true },
-      // historyApiFallback: true,
-      // hot: true,
-      // inline: true,
+      stats: { colors: true },
+      historyApiFallback: true,
+      hot: true,
+      inline: true,
     }, other),
-    //plugins: [new webpack.HotModuleReplacementPlugin()],
+    plugins: [new webpack.HotModuleReplacementPlugin()],
   };
 };
 
