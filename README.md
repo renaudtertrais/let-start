@@ -2,9 +2,9 @@
 
 A flexible web starter kit (webpack, babel, react...)
 
-**DISCLAMER:** This project was created for my own needs and preferances, 
-so it might no fit your expectations. The aim is not to be too generic, 
-but to provide a quite complete solution to reduce copy/paste when starting a new project.
+**DISCLAIMER:** This project was created for my own needs and preferences,
+so it might not fit your expectations. The aim is not to be too generic,
+but to provide an almost complete solution to reduce copy/paste when starting a new project.
 
 ## Stack
 
