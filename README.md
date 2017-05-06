@@ -81,7 +81,7 @@ rule(/\.ya?ml$/, 'json-loader', 'yaml-loader')
 ```
 ### html(…htmlFiles)
 
-This function will use the [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) that "simplifies creation of HTML files to serve your webpack bundles". In a nutshell, it add the `<script />` and `<link />` tags to you html file and add it into the build folder. 
+This function will use the [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin) that "simplifies creation of HTML files to serve your webpack bundles". In a nutshell, it add the `<script />` and `<link />` tags to you html file and add it into the build folder.
 
 ```js
 html('src/index.html')
